@@ -1,13 +1,13 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Lock = await hre.ethers.getContractFactory("Lock");
+  const Lock = await hre.ethers.getContractFactory("NFTMarketplace");
   const lock = await Lock.deploy();
 
   await lock.deployed();
 
   console.log(
-    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+    `Lock with 1 ETH and unlock timestamp deployed to ${lock.address}`
   );
 }
 
