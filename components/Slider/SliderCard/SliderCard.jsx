@@ -16,7 +16,7 @@ const SliderCard = () => {
             src={images.creatorbackground10}
             className={Style.sliderCard_box_img_img}
             alt="slider profile"
-            width={500}
+            width={392}
             height={300}
             objectFit="cover"
           />
