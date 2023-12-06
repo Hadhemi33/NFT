@@ -11,8 +11,12 @@ const AudioLive = () => {
                 <div className={Style.audioLive_box_left}>
                     <AudioCard />
                     <AudioCard />
+                    <AudioCard />
+                    <AudioCard />
                 </div>
                 <div className={Style.audioLive_box_right}>
+                    <AudioCardSmall />
+                    <AudioCardSmall />
                     <AudioCardSmall />
                     <AudioCardSmall />
                     <AudioCardSmall />

@@ -1,48 +1,53 @@
 import React, { useState } from "react";
-import { TiMediaPause, TiMediaPlay } from 'react-icons/ti'; // Use the correct import for the icons
-
 import Image from "next/image";
+import { TbPlayerPlay, TbPlayerPause } from "react-icons/tb";
 
-// INTERNAL IMPORT
+//INTERNAL IMPORT
 import Style from "./AudioCardSmall.module.css";
 import images from "../../../img";
 import LikeProfile from "../../LikeProfile/LikeProfile";
+
 const AudioCardSmall = () => {
-    const [play, setPlay] = useState(false);
+  const [play, setPlay] = useState(false);
 
-    const playMusic = () => {
-        setPlay(!play);
-    };
+  const playMusic = () => {
+    if (!play) {
+      setPlay(true);
+    } else {
+      setPlay(false);
+    }
+  };
+  return (
+    <div className={Style.audioPlayer}>
+      <div className={Style.audioPlayer_box}>
+        <Image
+          src={images.creatorbackground1}
+          alt="music"
+          width={100}
+          height={100}
+          className={Style.audioPlayer_box_img}
+        />
 
-    return (
-        <div className={Style.AudioPlayer}>
-            <div className={Style.AudioPlayer_box}>
-                <Image
-                    src={images.creatorbackground1}
-                    alt="music"
-                    height={100}
-                    width={100}
-                    className={Style.AudioPlayer_box_img}
-                />
-                <div className={Style.AudioPlayer_box_info}>
-                    <h4>  NFT music #1142</h4>
-                    <div className={Style.AudioPlayer_box_info_box}>
-                        <LikeProfile/>
-                        <div className={Style.AudioPlayer_box_info_box_price}>
-                            <small>Price</small>
-                            <p>1.00 ETH</p>
-                        </div>
-                    </div>
-                    <div
-                        className={Style.AudioPlayer_box_playBtn}
-                        onClick={playMusic}
-                    >
-                        {play ? <TiMediaPause /> : <TiMediaPlay />}
-                    </div>
-                </div>
+        <div className={Style.audioPlayer_box_info}>
+          <h4>NFT music #1142</h4>
+          <div className={Style.audioPlayer_box_info_box}>
+            <LikeProfile />
+            <div className={Style.audioPlayer_box_info_box_price}>
+              <small>Price</small>
+              <p>1.00 ETH</p>
             </div>
+          </div>
         </div>
-    );
+
+        <div
+          className={Style.audioPlayer_box_playBtn}
+          onClick={() => playMusic()}
+        >
+          {play ? <TbPlayerPause /> : <TbPlayerPlay />}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default AudioCardSmall;
