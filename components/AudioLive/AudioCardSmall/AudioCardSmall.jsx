@@ -6,8 +6,7 @@ import Image from "next/image";
 // INTERNAL IMPORT
 import Style from "./AudioCardSmall.module.css";
 import images from "../../../img";
-// import LikeProfile from "./components/LikeProfile/LikeProfile";
-
+import LikeProfile from "../../LikeProfile/LikeProfile";
 const AudioCardSmall = () => {
     const [play, setPlay] = useState(false);
 
@@ -28,7 +27,7 @@ const AudioCardSmall = () => {
                 <div className={Style.AudioPlayer_box_info}>
                     <h4>  NFT music #1142</h4>
                     <div className={Style.AudioPlayer_box_info_box}>
-                        {/* <LikeProfile/> */}
+                        <LikeProfile/>
                         <div className={Style.AudioPlayer_box_info_box_price}>
                             <small>Price</small>
                             <p>1.00 ETH</p>

@@ -2,8 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/aboutus": "pages/aboutus.js",
-  "/account": "pages/account.js",
+  "/login": "pages/login.js",
   "/collection": "pages/collection.js",
-  "/contactus": "pages/contactus.js"
+  "/signUp": "pages/signUp.js"
 }
