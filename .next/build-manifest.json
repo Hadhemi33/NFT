@@ -27,10 +27,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/signUp": [
+    "/contactus": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/signUp.js"
+      "static/chunks/pages/contactus.js"
+    ],
+    "/subscription": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/subscription.js"
     ]
   },
   "ampFirstPages": []
